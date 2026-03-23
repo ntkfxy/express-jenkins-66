@@ -8,7 +8,7 @@ const port: number = 3000
 // GET /
 app.get('/', (_: Request, res: Response) => {
   res.json({
-    message: 'Hello Express + TypeScript!'
+    message: 'Hello SE!'
   })
 })
 
@@ -30,8 +30,8 @@ app.get('/api/health', (_: Request, res: Response) => {
 app.get('/api/user', (_: Request, res: Response) => {
   res.json({
     id: 1,
-    name: 'Naruapon Suwanwijit',
-    email: 'naruapon@webmail.npru.ac.th'
+    name: 'Natthakan Jamratphum',
+    email: '664259005@webmail.npru.ac.th'
   })
 })
 
