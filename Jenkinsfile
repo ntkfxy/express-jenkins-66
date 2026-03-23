@@ -1,6 +1,11 @@
 pipeline {
     // ใช้ agent any เพราะ build จะทำงานบน Jenkins controller (Linux container) อยู่แล้ว
-    agent any
+    agent {
+    docker {
+        image 'node:18'
+        args '-v /var/run/docker.sock:/var/run/docker.sock -u root'
+    }
+}
 
     // กัน “เช็คเอาต์ซ้ำซ้อน”
     // ถ้า job เป็นแบบ Pipeline from SCM / Multibranch แนะนำเพิ่ม options { skipDefaultCheckout(true) }
