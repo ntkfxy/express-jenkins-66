@@ -2,7 +2,7 @@ import request from 'supertest'
 import express from 'express'
 
 const app = express()
-app.get('/api/hello', (_, res) => res.json({ message: 'Hello from Express API!' }))
+app.get('/api/hello', (_, res) => res.json({ message: 'Hello SE' }))
 
 test('GET /api/hello', async () => {
   const res = await request(app).get('/api/hello')
