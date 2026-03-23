@@ -9,7 +9,7 @@ WORKDIR /app
 COPY package*.json ./
 
 # ติดตั้ง Dependencies (รวม dev dependencies สำหรับ testing)
-RUN npm install
+RUN npm ci
 
 # Copy โค้ดทั้งหมดในโปรเจกต์เข้าไปใน container
 COPY . .
@@ -27,7 +27,7 @@ WORKDIR /app
 COPY package*.json ./
 
 # ติดตั้งเฉพาะ production dependencies
-RUN npm ci --only=production && npm cache clean --force
+RUN npm ci --omit=dev && npm cache clean --force
 
 # Copy โค้ดที่ compiled แล้วจาก builder stage
 COPY --from=builder /app/dist ./dist

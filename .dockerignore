@@ -8,10 +8,7 @@ build
 
 # Environment files
 .env
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
+.env.*
 
 # Testing
 coverage
@@ -22,7 +19,6 @@ coverage
 .gitignore
 
 # Docker
-Dockerfile
 .dockerignore
 
 # Documentation
@@ -43,6 +39,6 @@ Thumbs.db
 logs
 *.log
 
-# Temporary files
+# Temp
 .tmp
 .temp
