@@ -20,7 +20,7 @@ RUN npm run build
 # Production stage - สำหรับ production deployment
 FROM node:22-alpine AS production
 
-# กำหนด Working Directory ภายใน Container
+# กำหนด Working Directory ภายใน Containerr
 WORKDIR /app
 
 # Copy package files
